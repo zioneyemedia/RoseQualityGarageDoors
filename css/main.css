@@ -157,7 +157,9 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-
+body {
+  font-family: 'Open Sans', serif;
+}
 
 
 
