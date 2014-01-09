@@ -161,7 +161,10 @@ body {
   font-family: 'Open Sans', serif;
 }
 
-
+a.root {
+  text-decoration: none;
+  color: #FFF;
+}
 
 
 
