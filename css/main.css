@@ -166,7 +166,23 @@ a.root {
   color: #FFF;
 }
 
-
+.main .services {
+  width: auto;
+}
+.services .doors .door {
+  float: left;
+  list-style: none;
+  width: 23%;
+  padding: 0 1% 2%;
+}
+.services .doors .door h4 {
+  margin: 2% 0 0;
+}
+.services .doors .door .desc {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+}
 
 
 
