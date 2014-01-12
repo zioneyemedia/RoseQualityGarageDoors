@@ -161,6 +161,14 @@ body {
   font-family: 'Open Sans', serif;
 }
 
+.trademarked:after {
+  content: "\2122";
+}
+
+.registered:after {
+  content: "\00ae";
+}
+
 a.root {
   text-decoration: none;
   color: #FFF;
@@ -169,14 +177,24 @@ a.root {
 .main .services {
   width: auto;
 }
+.services .brand {
+  clear: both;
+}
 .services .doors .door {
   float: left;
   list-style: none;
   width: 23%;
   padding: 0 1% 2%;
 }
+.services .doors .door:nth-child(5) {
+  clear: both;
+}
 .services .doors .door h4 {
   margin: 2% 0 0;
+}
+.services .doors .door img {
+  height: 57%;
+  width: 57%;
 }
 .services .doors .door .desc {
   display: inline-block;
