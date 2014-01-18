@@ -161,6 +161,18 @@ body {
   font-family: 'Open Sans', serif;
 }
 
+header .quote {
+  float: right;
+  line-height: 2;
+}
+
+footer .telephone:last-child {
+  float: right;
+}
+
+.ellipsis:after {
+  content: '...';
+}
 .trademarked:after {
   content: "\2122";
 }
@@ -213,6 +225,13 @@ a.root {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (min-width: 320px) {
+
+  nav {
+    clear: both;
+  }
+}
 
 @media only screen and (min-width: 480px) {
 
@@ -433,4 +452,13 @@ a.root {
     h3 {
         page-break-after: avoid;
     }
+}
+
+/* Overrides */
+nav {
+  float: none;
+}
+
+nav a {
+  padding: 1px 1%;
 }

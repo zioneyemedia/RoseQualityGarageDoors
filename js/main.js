@@ -23,4 +23,8 @@
       router = Router(routes);
 
   router.init();
+
+  // Start @ home
+  showHome();
+
 }(jQuery));
