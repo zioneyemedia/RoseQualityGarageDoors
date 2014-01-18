@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/danwoods/RoseQualityGarageDoors/issues"
   },
-  "homepage": "https://github.com/danwoods/RoseQualityGarageDoors"
+  "homepage": "https://github.com/danwoods/RoseQualityGarageDoors",
+  "dependencies": {
+    "connect": "~2.12.0"
+  }
 }
