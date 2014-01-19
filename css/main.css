@@ -160,32 +160,37 @@ nav a:hover {
 body {
   font-family: 'Open Sans', serif;
 }
-
 header .quote {
   float: right;
   line-height: 2;
 }
-
 footer .telephone:last-child {
   float: right;
 }
-
+.quote {
+  font-family: 'Lobster', cursive;
+  font-style: italic;
+}
+.quote:before {
+  content: '"';
+  content: '\201c';
+}
+.quote:after {
+  content: '\201d';
+}
 .ellipsis:after {
   content: '...';
 }
 .trademarked:after {
   content: "\2122";
 }
-
 .registered:after {
   content: "\00ae";
 }
-
 a.root {
   text-decoration: none;
   color: #FFF;
 }
-
 .main .products {
   width: auto;
 }
