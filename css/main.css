@@ -189,7 +189,7 @@ a.root {
 .main .products {
   width: auto;
 }
-.services header .callout {
+.callout {
   font-weight: bold;
   text-decoration: none;
 }
