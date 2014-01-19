@@ -186,9 +186,22 @@ a.root {
   color: #FFF;
 }
 
-.main .products,
-.main .services {
+.main .products {
   width: auto;
+}
+.services header .callout {
+  font-weight: bold;
+  text-decoration: none;
+}
+.services + aside .callout {
+  color: red;
+}
+.services + aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+.services + aside ul li a{
+  text-decoration: none;
 }
 .products .brand {
   clear: both;
