@@ -186,29 +186,30 @@ a.root {
   color: #FFF;
 }
 
+.main .products,
 .main .services {
   width: auto;
 }
-.services .brand {
+.products .brand {
   clear: both;
 }
-.services .doors .door {
+.products .doors .door {
   float: left;
   list-style: none;
   width: 23%;
   padding: 0 1% 2%;
 }
-.services .doors .door:nth-child(5) {
+.products .doors .door:nth-child(5) {
   clear: both;
 }
-.services .doors .door h4 {
+.products .doors .door h4 {
   margin: 2% 0 0;
 }
-.services .doors .door img {
+.products .doors .door img {
   height: 57%;
   width: 57%;
 }
-.services .doors .door .desc {
+.products .doors .door .desc {
   display: inline-block;
   font-size: 14px;
   line-height: 1.5;
@@ -241,7 +242,7 @@ a.root {
 
     nav a {
         float: left;
-        width: 27%;
+        width: 20%;
         margin: 0 1.7%;
         padding: 25px 2%;
         margin-bottom: 0;

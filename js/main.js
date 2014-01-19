@@ -6,7 +6,11 @@
       },
       showServices = function () {
         $.get('services.html', function(data){
-          $.get('img/*.jpg.*file_index.html', function(data){console.log(data);});
+          $('.wrapper.main').html(data);
+        });
+      },
+      showProducts = function () {
+        $.get('products.html', function(data){
           $('.wrapper.main').html(data);
         });
       },
@@ -18,6 +22,7 @@
       routes = {
         '/home': showHome,
         '/services': showServices,
+        '/products': showProducts,
         '/contact': showContact
       },
       router = Router(routes);
