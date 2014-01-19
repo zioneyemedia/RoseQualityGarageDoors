@@ -157,15 +157,55 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+/* Palette
+ * tan: #DDCBA6
+ * dark: #57504D
+ * light: #E9E4D0
+ * grey: #B3B4AA
+ * brown: #835132
+*/
+
 body {
   font-family: 'Open Sans', serif;
 }
+/* Dark */
+nav a {
+  background-color: #57504D;
+}
+header h2 .quote {
+  color: #57504D;
+}
+
+/* Grey */
+.main aside,
+.footer-container {
+  background-color: #B3B4AA;
+}
+
+/* Tan */
+.header-container {
+  background-color: #DDCBA6;
+}
+
+/* Border colors */
+.header-container {
+  border-bottom-color: #57504D;
+}
+.main aside,
+.footer-container {
+  border-top-color: #57504D;
+}
+
+
 header .quote {
   float: right;
   line-height: 2;
 }
 footer .telephone:last-child {
   float: right;
+}
+.header-container {
+  color: #000;
 }
 .quote {
   font-family: 'Lobster', cursive;
@@ -189,7 +229,7 @@ footer .telephone:last-child {
 }
 a.root {
   text-decoration: none;
-  color: #FFF;
+  color: #000;
 }
 .main .products {
   width: auto;
