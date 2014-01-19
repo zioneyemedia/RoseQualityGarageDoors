@@ -29,7 +29,9 @@
 
   router.init();
 
-  // Start @ home
-  showHome();
+  // Default to home
+  if(window.location.hash.slice(2).length === 0){
+    showHome();
+  }
 
 }(jQuery));
