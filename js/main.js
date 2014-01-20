@@ -34,4 +34,23 @@
     showHome();
   }
 
+  $(document).ready(function(){
+    $('body').on('submit', '.contact + aside form', function(e){
+      e.preventDefault();
+      var $form = $('.contact + form');
+      $.post({
+        url: "/email",
+        data: {
+          "name": $form.find('[name="name"]').val(),
+          "email": $form.find('[name="email"]').val(),
+          "phone": $form.find('[name="phone"]').val(),
+          "message": $form.find('[name="message"]').text(),
+        },
+        success: function(){
+          alert('hit');
+        }
+      });
+    });
+  });
+
 }(jQuery));

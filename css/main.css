@@ -205,6 +205,7 @@ footer .telephone:last-child {
   float: right;
 }
 .header-container {
+  border-bottom-width: 10px;
   color: #000;
 }
 .quote {
@@ -231,6 +232,18 @@ a.root {
   text-decoration: none;
   color: #000;
 }
+.home h4 {
+  font-size: 26px;
+}
+.home .mission h3 {
+  margin-bottom: 0;
+}
+.home .mission .quote {
+  margin-top: 0;
+}
+.home .contact .telephone {
+  display: inline-block;
+}
 .main .products {
   width: auto;
 }
@@ -240,6 +253,9 @@ a.root {
 }
 .services + aside .callout {
   color: red;
+}
+.services + aside .telephone {
+  color: blue;
 }
 .services + aside ul {
   list-style-type: none;
@@ -279,8 +295,32 @@ a.root {
 .contact .email {
   display: block;
   text-decoration: none;
+  font-weight: bold;
 }
-
+.contact + aside form label {
+  display: inline-block;
+  padding: 1% 0;
+  width: 25%;
+}
+.contact + aside form label:after {
+  content: ":";
+}
+.contact + aside form inpuy {
+  width: 67%;
+}
+.contact + aside form textarea {
+  display: block;
+  width: 100%;
+  height: 175px;
+}
+.contact + aside form input[type="submit"] {
+  float: right;
+  margin-top: 4%;
+}
+.contact + aside form input:invalid {
+  border-color:hsl(0, 50%, 50%);
+  background:hsl(0, 50%, 90%);
+}
 
 
 
