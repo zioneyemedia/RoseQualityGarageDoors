@@ -8,17 +8,28 @@ connect()
     // Contact form
     .use(function (req, res, next) {
       if(req.method === 'POST') {
-        console.log("This is a POST request");
-        next();
+        if(req.url === '/contact'){
+          console.log('Contact Request');
+          req.on('data', function(chunk) {
+            console.log("Received body data:");
+            console.log(chunk.toString());
+          });
+          res.writeHead(200, "OK", {'Content-Type': 'text/html'});
+          res.end();
+        }
+        else{
+          next();
+        }
       }
       else {
         next();
       }
     })
     .use(connect.static(directory))
-    .use(function(req, res){
-      console.log(req.url);
-    })
     .listen(port);
 
 console.log('Listening on port ' + port);
+
+function sendEmail(name, email, phone, mesg){
+  
+}
