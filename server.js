@@ -1,6 +1,6 @@
 var connect = require('connect'),
     http = require('http'),
-    directory = __dirname,
+    qs = require('querystring'),
     port = process.env.PORT || 8080;
 
 connect()
@@ -12,7 +12,7 @@ connect()
           console.log('Contact Request');
           req.on('data', function(chunk) {
             console.log("Received body data:");
-            console.log(chunk.toString());
+            console.log(qs.parse(chunk.toString()));
           });
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
@@ -25,7 +25,7 @@ connect()
         next();
       }
     })
-    .use(connect.static(directory))
+    .use(connect.static(__dirname))
     .listen(port);
 
 console.log('Listening on port ' + port);

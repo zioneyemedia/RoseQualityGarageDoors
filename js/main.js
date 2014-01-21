@@ -48,7 +48,7 @@
           "message": $form.find('[name="message"]').val(),
         },
         success: function(){
-          alert('hit');
+          //alert('hit');
         }
       });
     });
