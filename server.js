@@ -19,10 +19,11 @@ connect()
               to: 'woodson.dan@gmail.com',
               from: 'site@rosequalitygaragedoors.com',
               subject: 'Contact request from website',
-              text: 'Contact request:\n' +
-                    'Name: ' + (mesgData.name || '(No name given)') +
-                    'Email: ' + (mesgData.email || '(No email given)') +
-                    'Phone: ' + (mesgData.phone || '(No phone number given)') +
+              text: 'Contact request\n' +
+                    '===============\n' +
+                    'Name: ' + (mesgData.name || '(No name given)')  + '\n' +
+                    'Email: ' + (mesgData.email || '(No email given)')  + '\n'  +
+                    'Phone: ' + (mesgData.phone || '(No phone number given)')  + '\n'  +
                     'Message: ' + (mesgData.message || '(No additional details)')
               },
               function(err, json) {
