@@ -19,7 +19,7 @@ connect()
               to: 'woodson.dan@gmail.com',
               from: 'site@rosequalitygaragedoors.com',
               subject: 'Contact request from website',
-              text: 'Contact request:\n' + JSON.stringify(mesgData);
+              text: 'Contact request:\n' + JSON.stringify(mesgData)
               },
               function(err, json) {
                 if (err) { return console.error(err); }
