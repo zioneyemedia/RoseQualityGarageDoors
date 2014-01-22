@@ -1,7 +1,7 @@
-var connect = require('connect'),
-    http = require('http'),
-    qs = require('querystring'),
-    port = process.env.PORT || 8080,
+var connect  = require('connect'),
+    http     = require('http'),
+    qs       = require('querystring'),
+    port     = process.env.PORT || 8080,
     sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 connect()
@@ -19,7 +19,11 @@ connect()
               to: 'woodson.dan@gmail.com',
               from: 'site@rosequalitygaragedoors.com',
               subject: 'Contact request from website',
-              text: 'Contact request:\n' + JSON.stringify(mesgData)
+              text: 'Contact request:\n' +
+                    'Name: ' + mesgData.name || '(No name given)' +
+                    'Email: ' + mesgData.email || '(No email given)' +
+                    'Phone: ' + mesgData.phone || '(No phone number given)' +
+                    'Message: ' + mesgData.message || '(No additional details)'
               },
               function(err, json) {
                 if (err) { return console.error(err); }
@@ -37,11 +41,8 @@ connect()
         next();
       }
     })
+    // Static resources
     .use(connect.static(__dirname))
     .listen(port);
 
 console.log('Listening on port ' + port);
-
-function sendEmail(name, email, phone, mesg){
-  
-}
