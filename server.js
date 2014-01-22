@@ -20,10 +20,10 @@ connect()
               from: 'site@rosequalitygaragedoors.com',
               subject: 'Contact request from website',
               text: 'Contact request:\n' +
-                    'Name: ' + mesgData.name || '(No name given)' +
-                    'Email: ' + mesgData.email || '(No email given)' +
-                    'Phone: ' + mesgData.phone || '(No phone number given)' +
-                    'Message: ' + mesgData.message || '(No additional details)'
+                    'Name: ' + (mesgData.name || '(No name given)') +
+                    'Email: ' + (mesgData.email || '(No email given)') +
+                    'Phone: ' + (mesgData.phone || '(No phone number given)') +
+                    'Message: ' + (mesgData.message || '(No additional details)')
               },
               function(err, json) {
                 if (err) { return console.error(err); }
