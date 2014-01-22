@@ -12,13 +12,14 @@ connect()
         if(req.url === '/contact'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
+            var mesgData = qs.parse(chunk.toString());
             console.log("Received body data:");
             console.log(qs.parse(chunk.toString()));
             sendgrid.send({
               to: 'woodson.dan@gmail.com',
               from: 'site@rosequalitygaragedoors.com',
-              subject: 'Request for contact',
-              text: 'Sending email with NodeJS through SendGrid!'
+              subject: 'Contact request from website',
+              text: 'Contact request:\n' + JSON.stringify(mesgData);
               },
               function(err, json) {
                 if (err) { return console.error(err); }
