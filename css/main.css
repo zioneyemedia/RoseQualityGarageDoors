@@ -300,11 +300,17 @@ a.root {
 .contact h2 {
   margin-bottom: 2%;
 }
-.contact .telephone,
-.contact .email {
+.contact h3 {
+  margin-bottom: 0;
+}
+.contact [itemprop="telephone"],
+.contact [itemprop="email"] {
   display: block;
   text-decoration: none;
   font-weight: bold;
+}
+.contact [itemprop="address"] [itemprop="streetAddress"] {
+  display: block;
 }
 .contact + aside form label {
   display: inline-block;
