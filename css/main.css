@@ -414,7 +414,7 @@ a.root {
 .slider img {
   height: 15em;
   opacity: 0;
-  transition: .25s;
+  transition: 1.5s;
   width: 550px;
   vertical-align: top;
   visibility: hidden;
