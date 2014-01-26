@@ -4,13 +4,23 @@
           $('.wrapper.main').html(data);
 
           // Setup Slider
-          var intrSlider = window.setInterval(function(){
-            var curSlideNum = Number($('.slider input:checked').attr('id').replace('slide', '')),
-                nextSlideId = 'slide' + (curSlideNum+1 > 4 ? 1 : curSlideNum+1),
-                nextSlide = $('#'+nextSlideId);
-            $('.slider input').prop('checked', false);
-            nextSlide.prop('checked', true);
-          }, 2500);
+          var intrSlider;
+          function sliderStart(){
+            intrSlider = window.setInterval(function(){
+              var curSlideNum = Number($('.slider input:checked').attr('id').replace('slide', '')),
+                  nextSlideId = 'slide' + (curSlideNum+1 > 4 ? 1 : curSlideNum+1),
+                  nextSlide = $('#'+nextSlideId);
+              $('.slider input').prop('checked', false);
+              nextSlide.prop('checked', true);
+            }, 2500);
+          }
+          $('.wrapper.main').on('mouseenter', '.slider', function(){
+            window.clearInterval(intrSlider);
+          });
+          $('.wrapper.main').on('mouseleave', '.slider', function(){
+            sliderStart();
+          });
+          sliderStart();
 
         });
       },
