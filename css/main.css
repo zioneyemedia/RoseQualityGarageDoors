@@ -372,7 +372,7 @@ a.root {
   cursor: pointer;
   display: block;
   height: .5em;
-  left: 24em;
+  left: 15.75em;
   opacity: 0;
   position: absolute;
   transition: .25s;
@@ -400,16 +400,16 @@ a.root {
   background-color: #fff;
 }
 .slider:hover li:nth-child(1) label {
-  left: .5em;
+  left: 13.5em;
 }
 .slider:hover li:nth-child(2) label {
-  left: 2em;
+  left: 15em;
 }
 .slider:hover li:nth-child(3) label {
-  left: 3.5em;
+  left: 16.5em;
 }
 .slider:hover li:nth-child(4) label {
-  left: 5em;
+  left: 18em;
 }
 .slider img {
   height: 15em;
