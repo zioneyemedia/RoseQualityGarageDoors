@@ -1,11 +1,14 @@
 (function($){
+  var intrSlider;
   var showHome = function () {
         $.get('home.html', function(data){
           $('.wrapper.main').html(data);
 
           // Setup Slider
-          var intrSlider;
           function sliderStart(){
+            if(typeof interSlider !== "undefined"){
+              window.clearInterval(interSlider);
+            }
             intrSlider = window.setInterval(function(){
               var curSlideNum = Number($('.slider input:checked').attr('id').replace('slide', '')),
                   nextSlideId = 'slide' + (curSlideNum+1 > 4 ? 1 : curSlideNum+1),
@@ -46,6 +49,14 @@
         '/contact': showContact
       },
       router = Router(routes);
+      router.configure({
+        on:function(){
+          try{
+            window.clearInterval(intrSlider);
+          }
+          catch(err){}
+        }
+      });
 
   router.init();
 
@@ -68,7 +79,7 @@
           "message": $form.find('[name="message"]').val(),
         },
         success: function(){
-          //alert('hit');
+          $('.contact + aside').html('<h3>Thank you, message sent</h3>');
         }
       });
     });
