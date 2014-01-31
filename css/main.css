@@ -292,6 +292,10 @@ a.root {
   height: 57%;
   width: 57%;
 }
+.products .doors .door a {
+  color: inherit;
+  text-decoration: none;
+}
 .products .doors .door .desc {
   display: inline-block;
   font-size: 14px;
