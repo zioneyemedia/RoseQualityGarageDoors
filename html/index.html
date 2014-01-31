@@ -38,76 +38,7 @@
     </div>
 
     <div class="main-container">
-      <div class="main wrapper clearfix"><article class="home">
-  <header>
-    <h2>Premiere residential garage door installation and repair in Middle Tennessee</h2>
-  </header>
-  <section>
-    <ul class="slider">
-      <li>
-        <input type="radio" id="slide1" name="slide" checked>
-        <label for="slide1"></label>
-        <img src="img/home-slider/home1.jpg">
-      </li>
-      <li>
-        <input type="radio" id="slide2" name="slide">
-        <label for="slide2"></label>
-        <img src="img/home-slider/home2.jpg">
-      </li>
-      <li>
-        <input type="radio" id="slide3" name="slide">
-        <label for="slide3"></label>
-        <img src="img/home-slider/home4.jpg">
-      </li>
-      <li>
-        <input type="radio" id="slide4" name="slide">
-        <label for="slide4"></label>
-        <img src="img/home-slider/home5.jpg">
-      </li>
-    </ul>
-  </section>
-  <!--
-  <section class="mission">
-    <h3 class="ellipsis">Our Mission</h3>
-    <p class="quote">Operate a successful company by providing, products, and services with integrity and commitment to our customers. Our company commitment to our customers is to provide superior products, custom door applications, and twenty-four hour emergency service, that makes us a premier supplier for residential homes, contractors, and homebuilders, in middle Tennessee.  In addition, our professionally trained expert technicians see each job through to perfection.</p>
-  </section>
-  -->
-  <section class="contact">
-    <h4>
-      <span class="callout">Call</span>
-      <a class="telephone callout" href="tel:+16157303499">615-730-3499</a>
-      <span class="callout"> for a free estimate!</span>
-    </h4>
-  </section>
-</article>
-
-<aside>
-  <h3 class="ellipsis">Our Mission</h3>
-  <p>Operate a successful company by providing, products, and services with integrity and commitment to our customers. Our company commitment to our customers is to provide superior products, custom door applications, and twenty-four hour emergency service, that makes us a premier supplier for residential homes, contractors, and homebuilders, in middle Tennessee.  In addition, our professionally trained expert technicians see each job through to perfection.</p>
-</aside>
-<script>
-  var intrSlider;
-  function sliderStart(){
-    if(typeof interSlider !== "undefined"){
-      window.clearInterval(interSlider);
-    }
-    intrSlider = window.setInterval(function(){
-      var curSlideNum = Number($('.slider input:checked').attr('id').replace('slide', '')),
-          nextSlideId = 'slide' + (curSlideNum+1 > 4 ? 1 : curSlideNum+1),
-          nextSlide = $('#'+nextSlideId);
-      $('.slider input').prop('checked', false);
-      nextSlide.prop('checked', true);
-    }, 2500);
-  }
-  $('.wrapper.main').on('mouseenter', '.slider', function(){
-    window.clearInterval(intrSlider);
-  });
-  $('.wrapper.main').on('mouseleave', '.slider', function(){
-    sliderStart();
-  });
-  sliderStart();
-</script>
-
+      <div class="main wrapper clearfix">
 
       </div> <!-- #main -->
     </div> <!-- #main-container -->

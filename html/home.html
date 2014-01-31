@@ -45,3 +45,25 @@
   <h3 class="ellipsis">Our Mission</h3>
   <p>Operate a successful company by providing, products, and services with integrity and commitment to our customers. Our company commitment to our customers is to provide superior products, custom door applications, and twenty-four hour emergency service, that makes us a premier supplier for residential homes, contractors, and homebuilders, in middle Tennessee.  In addition, our professionally trained expert technicians see each job through to perfection.</p>
 </aside>
+<script>
+  var intrSlider;
+  function sliderStart(){
+    if(typeof interSlider !== "undefined"){
+      window.clearInterval(interSlider);
+    }
+    intrSlider = window.setInterval(function(){
+      var curSlideNum = Number($('.slider input:checked').attr('id').replace('slide', '')),
+          nextSlideId = 'slide' + (curSlideNum+1 > 4 ? 1 : curSlideNum+1),
+          nextSlide = $('#'+nextSlideId);
+      $('.slider input').prop('checked', false);
+      nextSlide.prop('checked', true);
+    }, 2500);
+  }
+  $('.wrapper.main').on('mouseenter', '.slider', function(){
+    window.clearInterval(intrSlider);
+  });
+  $('.wrapper.main').on('mouseleave', '.slider', function(){
+    sliderStart();
+  });
+  sliderStart();
+</script>

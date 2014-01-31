@@ -1,8 +1,24 @@
 var connect  = require('connect'),
+    fs       = require('fs'),
     http     = require('http'),
     qs       = require('querystring'),
     port     = process.env.PORT || 8080,
     sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+
+// Build pages
+var index_html = fs.readFileSync('html/index.html', {encoding: 'utf-8'}),
+    home_html = fs.readFileSync('html/home.html', {encoding: 'utf8'}),
+    services_html = fs.readFileSync('html/services.html', {encoding: 'utf8'}),
+    products_html = fs.readFileSync('html/products.html', {encoding: 'utf8'}),
+    contact_html = fs.readFileSync('html/contact.html', {encoding: 'utf8'}),
+    split_phrase = '<div class="main wrapper clearfix">',
+    split_idx = index_html.indexOf(split_phrase) + split_phrase.length,
+    index_top = index_html.substring(0, split_idx),
+    index_bottom = index_html.substring(split_idx);
+fs.writeFileSync('index.html', index_top + home_html + index_bottom);
+fs.writeFileSync('services.html', index_top + services_html + index_bottom);
+fs.writeFileSync('products.html', index_top + products_html + index_bottom);
+fs.writeFileSync('contact.html', index_top + contact_html + index_bottom);
 
 connect()
     .use(connect.logger())
