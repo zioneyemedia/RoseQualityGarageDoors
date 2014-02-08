@@ -273,6 +273,13 @@ a.root {
 .services + aside ul li a{
   text-decoration: none;
 }
+.services + aside p {
+  font-size: 18px;
+}
+.services + aside .source {
+  float: right;
+  margin-top: 0;
+}
 .products .brand {
   clear: both;
 }
