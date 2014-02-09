@@ -18,6 +18,29 @@
         }
       });
     });
+/*
+    // Anchor bottom
+    $('window').load(function(){
+      $(function(){
+        var contentHeight = $('.main-container').height();
+        var overflowHeight = $('.main-container .wrapper').height();
+        console.log('cnt height: ' + contentHeight);
+        console.log('ovrflow height: ' + overflowHeight);
+        if (overflowHeight > contentHeight) {
+          $('.footer-container').css({
+            'position': 'relative',                                                                                          
+            'bottom': 0                                                                                                      
+          });
+        }
+        else {
+          $('.footer-container').css({
+            'position': 'absolute',
+            'bottom': '10px'                                                                                                 
+          });
+        }
+      });
+    });
+*/
   });
 
 }(jQuery));
