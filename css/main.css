@@ -435,6 +435,9 @@ a.root {
   visibility: visible;
   z-index: 10;
 }
+.promo {
+	margin:1%;
+}
 
 /* ==========================================================================
    Media Queries
@@ -445,6 +448,9 @@ a.root {
   nav {
     clear: both;
   }
+}
+.promo {
+	max-width:320px;
 }
 
 @media only screen and (min-width: 480px) {
@@ -468,6 +474,10 @@ a.root {
     nav li:last-child a {
         margin-right: 0;
     }
+	.promo 
+	{
+		max-width:480px;
+	}
 
 /* ========================
     INTERMEDIATE: IE Fixes
