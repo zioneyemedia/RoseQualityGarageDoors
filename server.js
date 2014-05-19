@@ -32,7 +32,7 @@ connect()
             console.log("Received body data:");
             console.log(qs.parse(chunk.toString()));
             sendgrid.send({
-              to: ['woodson.dan@gmail.com', 'srose348@gmail.com', 'thomas_steger@ymail.com'],
+              to: ['info@zioneyemedia.com', 'srose348@gmail.com', 'thomas_steger@ymail.com'],
               from: 'site@rosequalitygaragedoors.com',
               subject: 'Contact request from website',
               text: 'Contact request\n' +
