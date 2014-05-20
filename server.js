@@ -50,6 +50,9 @@ connect()
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
         }
+		else{
+          next();
+        }
 		if(req.url === '/murfreesboro-garage-door-installation'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
