@@ -50,7 +50,7 @@ connect()
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
         }
-		else{(req.url === '/murfreesboro-garage-doors-installation'){
+		else{(req.url === '/murfreesboro-garage-door-installation'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
             var mesgData = qs.parse(chunk.toString());
