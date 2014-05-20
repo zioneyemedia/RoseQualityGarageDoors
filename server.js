@@ -50,23 +50,7 @@ connect()
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
         }
-        else{
-          next();
-        }
-      }
-      else {
-        next();
-      }
-    })
-    // Static resources
-    .use(connect.static(__dirname))
-    .listen(port);
-connect()
-	.use(connect.logger())
-	// Promo form
-    .use(function (req, res, next) {
-      if(req.method === 'POST') {
-        if(req.url === '/murfreesboro-garage-door-installation.html'){
+		if(req.url === '/murfreesboro-garage-door-installation.html'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
             var mesgData = qs.parse(chunk.toString());
@@ -75,7 +59,7 @@ connect()
             sendgrid.send({
               to: ['info@zioneyemedia.com'],
               from: 'site@rosequalitygaragedoors.com',
-              subject: '30% Off Installation Promo request',
+              subject: '30% Off Installation Promo Offer',
               text: 'Contact request\n' +
                     '===============\n' +
                     'Name: ' + (mesgData.name || '(No name given)')  + '\n' +
