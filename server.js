@@ -53,8 +53,6 @@ connect()
         else{
           
     // Contact form
-    .use(function (req, res, next) {
-      if(req.method === 'POST') {
         if(req.url === '/murfreesboro-garage-door-installation.html'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
@@ -79,12 +77,10 @@ connect()
           });
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
-        }
-		}
+        }		
         else{
           next();
-        }
-      }
+        }  
       else {
         next();
       }
