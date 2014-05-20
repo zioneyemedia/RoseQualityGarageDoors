@@ -58,6 +58,10 @@ connect()
         next();
       }
     })
+    // Static resources
+    .use(connect.static(__dirname))
+    .listen(port);
+connect()
 	.use(connect.logger())
 	// Promo form
     .use(function (req, res, next) {
