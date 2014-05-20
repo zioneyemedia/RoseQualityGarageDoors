@@ -51,19 +51,7 @@ connect()
           res.end();
         }
         else{
-          next();
-        }
-      }
-      else {
-        next();
-      }
-    })
-    // Static resources
-    .use(connect.static(__dirname))
-    .listen(port);
-
-connect()
-    .use(connect.logger())
+          
     // Contact form
     .use(function (req, res, next) {
       if(req.method === 'POST') {
@@ -92,6 +80,7 @@ connect()
           res.writeHead(200, "OK", {'Content-Type': 'text/html'});
           res.end();
         }
+		}
         else{
           next();
         }
