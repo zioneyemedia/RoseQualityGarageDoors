@@ -58,10 +58,11 @@ connect()
         next();
       }
     })
+	.use(connect.logger())
 	// Promo form
     .use(function (req, res, next) {
       if(req.method === 'POST') {
-        if(req.url === '/murfreesboro-garage-door-installation'){
+        if(req.url === '/murfreesboro-garage-door-installation.html'){
           console.log('Contact Request');
           req.on('data', function(chunk) {
             var mesgData = qs.parse(chunk.toString());
