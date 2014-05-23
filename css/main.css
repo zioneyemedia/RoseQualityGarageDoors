@@ -501,18 +501,17 @@ a.root {
   nav {
     clear: both;
   }
-  .column, .column2 {
+    .column, .column2 {
 	float:none;
 	padding-left:10px;
-	width:320px;
+	min-width:320px;
 }
 
+}
 .promo img {
 	min-width:100%;
 	max-width:320px;
 }
-}
-
 
 @media only screen and (min-width: 480px) {
 
@@ -540,13 +539,6 @@ a.root {
 		min-width:100%;
 		max-width:480px;
 	}
-	.column, .column2 {
-	float:none;
-	padding-left:10px;
-	width:100%;
-	}
-}
-
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -573,13 +565,6 @@ a.root {
            -moz-box-shadow: 0 5px 10px #aaa;
                 box-shadow: 0 5px 10px #aaa;
     }
-	.column, .column2 {
-	float:left;
-	padding-left:10px;
-	}
-		.column {width:220px;}
-}
-
 
 /* ============
     WIDE: Menu
