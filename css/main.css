@@ -609,13 +609,13 @@ a.root {
 		min-width: 100%;
 		max-width: 768px;
 	}
-	.column, .column2 {
+	/*.column, .column2 {
 	float:left;
 	padding-left:10px;
 	margin-right:1%;
 	}
 		.column {width:23%;}
-		.column {width:46%;}
+		.column {width:46%;}*/
 
 }
 
@@ -634,11 +634,7 @@ a.root {
 		min-width:100%;
 		width:100%;
 	}
-	.column , .column2 {
-	float:left;
-	padding-left:10px;
-	}
-		.colulmn {width:
+		
 }
 
 /* ==========================================================================
