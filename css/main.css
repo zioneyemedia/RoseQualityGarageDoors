@@ -611,6 +611,19 @@ a.root {
 		min-width:100%;
 		width:100%;
 	}
+	.column {
+	float:left;
+	width:23%;
+	margin-right:1%;
+	padding-left:10px;
+	}
+	.column2 {
+	float:left;
+	width:46%;
+	margin-right:1%;
+	padding-left:10px;
+	}
+
 }
 
 /* ==========================================================================
