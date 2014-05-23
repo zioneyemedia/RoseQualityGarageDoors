@@ -501,6 +501,8 @@ a.root {
   nav {
     clear: both;
   }
+  .column {width:48%; font-size:88%; line-height:normal;}
+  .column2 {float:none; font-size:12px; line-height:normal; margin-right:none;}
 }
 .promo img {
 	min-width:100%;
