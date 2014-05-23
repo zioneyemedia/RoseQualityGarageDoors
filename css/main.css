@@ -504,7 +504,9 @@ a.root {
     .column, .column2 {
 	float:none;
 	padding-left:10px;
+	margin-right:none;
 	min-width:320px;
+	width:100%;
 }
 .promo img {
 	min-width:100%;
@@ -544,8 +546,9 @@ a.root {
 	float:left;
 	padding-left:10px;
 	min-width:220px;
+	margin-right:1%;
 	}
-	.column {float:left; padding-left:10px; min-width:480px;}
+	.column2 {float:left; padding-left:10px; min-width:480px;}
 
 
 /* ========================
@@ -606,6 +609,14 @@ a.root {
 		min-width: 100%;
 		max-width: 768px;
 	}
+	.column, .column2 {
+	float:left;
+	padding-left:10px;
+	margin-right:1%;
+	}
+		.column {width:23%;}
+		.column {width:46%;}
+
 }
 
 @media only screen and (min-width: 1140px) {
@@ -623,6 +634,11 @@ a.root {
 		min-width:100%;
 		width:100%;
 	}
+	.column , .column2 {
+	float:left;
+	padding-left:10px;
+	}
+		.colulmn {width:
 }
 
 /* ==========================================================================
