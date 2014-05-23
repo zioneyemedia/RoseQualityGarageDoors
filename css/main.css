@@ -506,11 +506,11 @@ a.root {
 	padding-left:10px;
 	min-width:320px;
 }
-
-}
 .promo img {
 	min-width:100%;
 	max-width:320px;
+}
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -539,6 +539,14 @@ a.root {
 		min-width:100%;
 		max-width:480px;
 	}
+	
+	.column {
+	float:left;
+	padding-left:10px;
+	min-width:220px;
+	}
+	.column {float:left; padding-left:10px; min-width:480px;}
+
 
 /* ========================
     INTERMEDIATE: IE Fixes
